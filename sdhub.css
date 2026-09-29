@@ -1,0 +1,27 @@
+.flex
+{
+    display: flex;
+}
+
+.col {
+    flex-direction: column;
+}
+
+.gap {
+    gap: 20px;
+}
+
+.a1{
+        height: 500px;
+        width: 700px;
+        overflow: scroll;
+    }
+
+.a1 h1 {
+    font-size: 15px;
+    color: blue;
+} 
+
+.body {
+    padding: 20px;
+}

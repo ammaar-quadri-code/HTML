@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Animation</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        .car {
+            position: absolute;
+            /*  */
+            animation: movement 10s linear infinite;
+        }
+
+        @keyframes movement {
+            0% {
+                transform: translate(0, 0) rotate(0deg);
+            }
+
+            20% {
+                transform: translate(400px, 0) rotate(0deg);
+            }
+
+            25% {
+                transform: translate(400px, 0) rotate(90deg);
+            }
+
+            45% {
+                transform: translate(400px, 400px) rotate(90deg);
+            }
+
+            50% {
+                transform: translate(400px, 400px) rotate(180deg);
+            }
+
+            70% {
+                transform: translate(0, 400px) rotate(180deg);
+            }
+
+            75% {
+                transform: translate(0, 400px) rotate(270deg);
+            }
+
+            95% {
+                transform: translate(0, 0) rotate(270deg);
+            }
+
+            100% {
+                transform: translate(0, 0) rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="background">
+        <div class="overlay"></div>
+        <div class="car" style="position:absolute; width:600px; height:600px;">
+            <img src="car.png" width="200px" alt="">
+        </div>
+    </div>
+
+</body>
+
+</html>
