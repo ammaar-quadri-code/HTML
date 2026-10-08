@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Real Estate Using Tailwind CSS</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <style type="text/tailwindcss">
+        @theme {
+            --color-ammaar: #f8f4f0;       /* Cream */
+            --color-ammaar-1: #34a0a4;     /* Teal / Turquoise */
+            --color-ammaar-2: #1a1a1a;     /* Almost Black */
+            --color-ammaar-3: #555555;     /* Dark Gray */
+            --color-ammaar-4: #0f7c80;     /* Dark Teal */
+            --color-ammaar-5: #f4a340;     /* Amber / Orange */
+            --spacing-ammaar: 50px;        /* Spacing */
+            --radius-ammaar: 30px;         /* Border Radius */
+        }
+    </style>
+</head>
+
+<body class="bg-ammaar p-4 text-ammaar-2">
+
+    <!-- ========== HERO ========== -->
+    <div class="rounded-ammaar bg-[url(https://websitedemos.net/real-estate-company-04/wp-content/uploads/sites/1484/2023/07/about-bg.jpg)] bg-cover bg-center w-full">
+        <div class="bg-black/60 text-white min-h-[820px] rounded-ammaar p-6 flex flex-col justify-between">
+
+            <!-- Navbar -->
+            <div class="flex flex-wrap justify-between items-center gap-4">
+                <h1 class="text-3xl">Real<span class="font-bold">Estate</span></h1>
+
+                <div class="flex gap-6 text-lg">
+                    <a href="index.html" class="hover:text-ammaar-1">Home</a>
+                    <a href="about.html" class="text-ammaar-1">About</a>
+                    <a href="services.html" class="hover:text-ammaar-1">Services</a>
+                    <a href="properties.html" class="hover:text-ammaar-1">Properties</a>
+                    <a href="contact.html" class="hover:text-ammaar-1">Contact</a>
+                </div>
+
+                <div class="flex gap-4">
+                    <a href="#" class="hover:text-ammaar-1">Twitter</a>
+                    <a href="#" class="hover:text-ammaar-1">Pinterest</a>
+                    <a href="#" class="hover:text-ammaar-1">YouTube</a>
+                </div>
+            </div>
+
+            <!-- Page title -->
+            <div class="text-center">
+                <p class="text-xl">Know More About Us</p>
+                <h2 class="text-6xl md:text-8xl mt-2">About Us</h2>
+            </div>
+
+            <div></div>
+        </div>
+    </div>
+
+    <!-- ========== OUR STORY ========== -->
+    <div class="bg-white rounded-ammaar mt-8 p-6 md:p-ammaar grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+        <div class="h-[500px] rounded-[25px] bg-[url(https://websitedemos.net/real-estate-company-04/wp-content/uploads/sites/1484/2023/07/about-us.jpg)] bg-cover bg-center"></div>
+        <div>
+            <h1 class="text-6xl font-bold">About Us</h1>
+            <h2 class="text-5xl leading-tight">Connecting people with perfect homes is our passion.</h2>
+            <div class="w-14 h-px bg-ammaar-3 mt-8"></div>
+            <p class="mt-8 text-ammaar-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <p class="mt-4 text-ammaar-3">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
+        </div>
+    </div>
+
+    <!-- ========== NUMBERS ========== -->
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
+        <div class="bg-white rounded-[25px] p-8 text-center">
+            <h3 class="text-5xl text-ammaar-1">15+</h3>
+            <p class="mt-2 text-ammaar-3">Years Experience</p>
+        </div>
+        <div class="bg-white rounded-[25px] p-8 text-center">
+            <h3 class="text-5xl text-ammaar-1">500+</h3>
+            <p class="mt-2 text-ammaar-3">Properties Sold</p>
+        </div>
+        <div class="bg-white rounded-[25px] p-8 text-center">
+            <h3 class="text-5xl text-ammaar-1">300+</h3>
+            <p class="mt-2 text-ammaar-3">Happy Clients</p>
+        </div>
+        <div class="bg-white rounded-[25px] p-8 text-center">
+            <h3 class="text-5xl text-ammaar-1">20+</h3>
+            <p class="mt-2 text-ammaar-3">Expert Agents</p>
+        </div>
+    </div>
+
+    <!-- ========== TESTIMONIALS ========== -->
+    <div class="bg-white rounded-ammaar mt-8 p-6 md:p-ammaar grid grid-cols-1 lg:grid-cols-2 gap-10">
+        <div>
+            <p class="text-7xl text-ammaar-1">“</p>
+            <h2 class="text-5xl leading-tight">Read from clients who have found the perfect place where they can create...</h2>
+            <div class="w-14 h-px bg-ammaar-3 mt-8"></div>
+            <p class="mt-8 text-ammaar-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor.</p>
+        </div>
+
+        <div class="flex flex-col gap-6">
+            <div class="border border-gray-200 rounded-[25px] p-8">
+                <p class="text-ammaar-5 text-xl">★★★★★</p>
+                <p class="mt-4">“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris id convallis neque nam scelerisque.”</p>
+                <p class="mt-4 text-ammaar-1 tracking-widest">SUHAIB MUZAFFAR</p>
+            </div>
+            <div class="border border-gray-200 rounded-[25px] p-8">
+                <p class="text-ammaar-5 text-xl">★★★★★</p>
+                <p class="mt-4">“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris id convallis neque nam scelerisque.”</p>
+                <p class="mt-4 text-ammaar-1 tracking-widest">OSMAN GHANI</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== FOOTER ========== -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 py-16">
+        <h1 class="text-2xl">Real<span class="font-bold">Estate</span></h1>
+
+        <div>
+            <h3 class="text-xl tracking-widest">About Us</h3>
+            <p class="mt-4 text-ammaar-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do.</p>
+        </div>
+
+        <div>
+            <h3 class="text-xl tracking-widest">Contact Info</h3>
+            <div class="mt-4 flex flex-col gap-1 text-ammaar-1">
+                <p>13, Fifth Avenue, New York, NY 101660</p>
+                <p>contact@info.com</p>
+                <p>555-345-4599</p>
+            </div>
+        </div>
+
+        <div>
+            <h3 class="text-xl tracking-widest">Property Search</h3>
+            <p class="mt-4 text-ammaar-3">Lorem ipsum dolor sit amet, consectetur elit.</p>
+            <div class="mt-4 flex gap-2">
+                <input type="text" placeholder="Search Properties" class="w-full border border-gray-300 bg-white px-3 py-2 outline-none focus:border-ammaar-1">
+                <button class="bg-ammaar-1 hover:bg-ammaar-4 text-white px-4 rounded-full">🔍</button>
+            </div>
+        </div>
+    </div>
+
+            <!-- ========== LAST TAG ========== -->
+        <div class="text-center py-6 border-t border-gray-300">
+            <p class="text-ammaar-3">
+                Made by
+                <span class=" text-2xl font-bold bg-linear-to-r from-ammaar-4 to-ammaar-5 bg-clip-text text-transparent">
+                    Ammaar Quadri
+                </span>
+            </p>
+        </div>
+
+</body>
+
+</html>

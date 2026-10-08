@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let student = {
+            name: "Ahmed",
+            age: 20,
+            course: "JavaScript",
+        }
+        console.log(student.name + "  has choosen " + student.course);
+
+
+        let colors = ["Red", "Green", "Blue", "Yellow"];
+        console.log(colors[0])
+        console.log(colors[1])
+        console.log(colors[colors.length - 1])
+
+        let marks = [80, 75, 90, 60];
+        console.log(marks[0] + marks[1] + marks[2] + marks[3])
+        //average
+
+        let students = [
+            { id: 1, name: "Ali", marks: 85 },
+            { id: 2, name: "Sara", marks: 92 },
+            { id: 3, name: "John", marks: 70 }
+        ];
+
+        console.log(students[0].name)
+        console.log(students[1].name)
+        console.log(students[2].name)
+        console.log(students[0].name + "scored" + marks[0])
+        console.log(marks[0] + marks[1] + marks[2])
+
+        let user = {
+            id: 1,
+            name: "Rahul",
+            address: {
+                city: "Hyderabad",
+                pincode: 500001
+            },
+            skills: ["HTML", "CSS", "JavaScript"]
+        };
+        console.log(user.address.city)
+        console.log(user.skills[1])
+    </script>
+</body>
+</html>

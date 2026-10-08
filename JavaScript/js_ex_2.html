@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        // prompt('send in a nuimber')
+        console.log('sdhub')
+        // primitive data type
+        const myName = "hello"  //string
+        let number = 324323  //number
+        const isActive = true //boolean
+        number = number + 3243
+
+        console.log(typeof myName);
+        console.log(typeof number);
+        console.log(typeof isActive);
+
+        const num1 = 2
+        const num2 = "2"
+
+        let name1 //if not initialized then undefined value
+        const name2 = "tajamul"
+        console.log(name1 + ' ' + name2);
+
+        console.log(num1 + num2);  // string interpolation
+        console.log(num1 - num2); // number interpolation
+
+        const employee = {
+            name: "tajamul",
+            age: 23,
+            isActive: true,
+            address: {
+                contanctNo: 4523423423,
+                location: {
+                    lat: 32423,
+                    long: 32423.
+                }
+            },
+            training: [
+                { id: 1, title: "web dev" },
+                { id: 2, title: "digital marketing" },
+                { id: 3, title: "data analytics" },
+            ]
+        }
+
+        console.log(employee.training[0].title);
+
+
+        let arr1 = [] //collection of same data types
+        arr1 = [1, 2, 'tajamul', true, 4335, 123, , 32, 423, 23, 4, 2423, 'final', 3242, 42, 34, 23, 4, 234, 234, 234, 'second final']
+
+        // 0, 1,2, 3
+        console.log(arr1.length);
+
+        console.log(arr1[arr1.length - 1]);
+
+
+        // why non primitive?
+
+        let a = 5
+        let b = a
+        a = 7
+        console.log(b); //stored by value
+
+        let ob1 = {
+            name: 'tajamul'
+        }
+        let ob2 = ob1
+        ob1.name = 'Mudassir'
+        console.log(ob2); // pass by address
+
+        //operations
+
+        // + numbers
+        console.log(a + b);
+        console.log(a - b);
+        console.log(a * b);
+        console.log(a / b);
+        console.log(a % b);
+        // 
+        let c = 2
+        let d = '2'
+        // console.log(a=b); // assingment operator
+        console.log(c == d); //loose check
+        console.log(c === d); //strict check
+        console.log(a > b);
+        console.log(a < b);
+        console.log(a != b);
+        // conditional logic
+        // && AND 
+        // || OR
+        console.log(a < b && c > d);
+        console.log(a > b && c > d);
+        console.log(a > b && c == d || a == c);
+        //true     || false => true     
+        //AND
+        /// T & T= T
+        // T& F= f
+        // F& T=F
+        // F& F=F
+
+        // or
+        // T& T=T
+        // T&F=T
+        // F&T=T
+        // F&f=F
+
+        // CONDITIONAL OPERATORS
+        // if & else, & switch
+        if (a == 5) {
+            console.log('this is working');
+
+        }
+
+        if (a == 6) {
+            console.log('this wont work');
+
+        } else {
+            console.log('this is else statement');
+
+        }
+
+        a==6 ? console.log('this wornt work') : console.log('This is else stament') // ternary operator
+        // condition ? true : false  /  syntax of ternary
+
+        if (b == 6) {
+            console.log('b==6')
+
+        }
+        else if (c > a) {
+            console.log('c>a')
+
+        } else if (d > a) {
+            console.log('d>a');
+
+        } else {
+            console.log('else');
+
+        }
+        switch (a) {
+            case 1:
+                console.log('a is 1');
+
+                break;
+            case 7: a
+                console.log('a is 7');
+                break;
+
+            default:
+                console.log('this');
+
+                break;
+        }
+
+
+        //
+        console.log('hello');
+        console.error('hello');
+        console.warn('hello');
+        console.table('hello');
+        console.dir('hello');
+
+        const input= parseInt( prompt(' Please enter something'))
+      if (isNaN(input)){
+        alert('please enter a valid number')
+      }
+        const isOk=confirm("do you agree")
+        alert(`you have input this number: ${input+1} & OK is ${isOk} `)
+        
+
+    </script>
+    <!-- <script src="var.js"></script> -->
+</body>
+
+</html>

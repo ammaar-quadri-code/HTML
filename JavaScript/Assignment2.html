@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ODD-EVEN-GAME - Ammaar Quadri</title>
+</head>
+
+<body>
+
+    <script>
+
+        alert("ODD-EVEN-GAME\n\nBy M.A.Q. - Ammaar Quadri\n\nRules:\n1. You will play 3 rounds against the system.\n2. In each round, you will choose ODD or EVEN and a number between 1-5.\n3. The system will also choose a random number between 1-5.\n4. The sum of both numbers will determine the winner of the round based on your choice.\n5. First to win 2 rounds wins the game!\n\nGood Luck!");
+        // ODD EVEN GAME
+
+        let userWins = 0;
+        let systemWins = 0;
+
+        for (let round = 1; round <= 3; round++) {
+
+            // User chooses Odd or Even
+            let choice = prompt("Round " + round + "\nChoose ODD or EVEN:");
+
+            // User chooses a number between 1-5
+            let userNumber = Number(prompt("Choose a number between 1 and 5:"));
+
+            // System chooses a random number between 1-5
+            let systemNumber = Math.floor(Math.random() * 5) + 1;
+
+            // Calculate sum
+            let sum = userNumber + systemNumber;
+
+            alert(
+                "Round " + round +
+                "\nYour Number: " + userNumber +
+                "\nSystem Number: " + systemNumber +
+                "\nSum: " + sum
+            );
+
+            // Check winner
+            if (sum % 2 == 0 && choice.toLowerCase() == "even") {
+                alert("You won Round " + round + "!");
+                userWins++;
+            }
+            else if (sum % 2 != 0 && choice.toLowerCase() == "odd") {
+                alert("You won Round " + round + "!");
+                userWins++;
+            }
+            else {
+                alert("System won Round " + round + "!");
+                systemWins++;
+            }
+
+            // Check if someone already won 2 rounds
+            if (userWins == 2 || systemWins == 2) {
+                break;
+            }
+        }
+
+        // Final result
+        if (userWins == 2) {
+            alert("🎉 YOU WON THE GAME!\nYou won " + userWins + " rounds.");
+        }
+        else {
+            alert("💻 SYSTEM WON THE GAME!\nSystem won " + systemWins + " rounds.");
+        }
+
+    </script>
+
+</body>
+
+</html>

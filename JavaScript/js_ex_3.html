@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       let marks = [80, 75, 90, 60,234,456,234,12,3423,34,5234,234,12,33,4,7562,3412,3 ,230343204,12312,12,312,321,3];
+       console.log(marks.length);
+       
+       let total=0
+       for (let index = 0; index < marks.length; index++) {
+           // const element = array[index];
+           console.log(index);
+           console.log('hello');
+           total=total+marks[index]
+           
+        }
+        console.log(total);
+        console.log(total/marks.length);
+        
+        let i=0
+        while (true) {
+            console.log(i);
+            i++
+            if (i==5) {
+                break;
+            }
+        }
+        
+        
+
+        // ROck paper scioor game
+        //Find total marks
+        const sum= marks[0]+marks[1]+marks[2]+marks[3]+marks[4]
+        // Find average
+        console.log(`total: ${sum} and average is ${sum/marks.length}`);
+        
+        </script>
+</body>
+</html>

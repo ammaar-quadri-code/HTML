@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Class-3</title>
+</head>
+
+<body>
+
+    <script>
+        console.log(Math.max(1, 2, 3));
+        console.log(Math.min(1, 2, 3));
+
+        const random = Math.random() * 10; //gives random number between 0 to 1
+        console.log(random);
+        console.log(Math.round(random)); //rounds to the nearest integer
+        console.log(Math.ceil(random)); //rounds up to the nearest integer
+        console.log(Math.floor(random)); //rounds down to the nearest integer
+
+
+        //Random indexing
+        let names = ["Ali", "Sara", "Ammaar", "Ahmed", "Suhaib"];
+
+        console.log(names[Math.floor(Math.random() * names.length)]); //gives random index of the array
+
+        let dice = [1, 2, 3, 4, 5, 6]
+        console.log(dice[Math.floor(Math.random() * dice.length)]);
+
+
+        //Scope
+
+        let a = 5 //global scope
+        let x = 5
+        if (true) {
+            let a = 6 //block scope
+            let m = 1
+
+            if (true) {
+                let a = 7
+                let b = 8
+                x = 16
+                console.log(m);
+            }
+            console.log(x);
+            console.log(a);
+            a = 9
+            console.log(a);
+        }
+
+
+        //Hosting
+
+        console.log(d)  //Undefined
+        // console.log(f)  //Error
+        let f = 7
+        var d = 5
+
+
+        //Loops
+
+        //While - when you don't know how many times you want to loop
+        let i = 0
+        while (true) {
+            console.log(i);
+            i++
+            if (i == 4) {
+                break; //stop the loop
+            }
+        }
+
+        //For - when you know how many times you want to loop
+        for (let index = 0; index < 5; index++) {
+            console.log(index);
+        }
+
+        //Specific for loop for arrays
+        for (const e of names) {
+            console.log('Hello, ' + e);
+        }
+
+        //Do while - executes the code block at least once
+        let j = 0
+        do {
+            console.log('This is written once');
+            j++
+            if (j == 4) {
+                break;
+            }
+        } while (false);
+
+        //ASSIGNMENT
+
+        //1
+        // ODD EVEN GAME
+        // Take input from user, have best of 3 rounds, if user wins 2 rounds, he wins the game
+        // User chooses either odd or even, then user chooses a number between 1-5, system chooses a random number between 1-5, if the sum of both numbers is odd and user chose odd, user wins, if the sum of both numbers is even and user chose even, user wins, else system wins
+
+        //2
+        //Rock Paper Scissors Game
+        // First -> rock, system -> paper, --> Paper Wins
+        // First -> rock, system -> paper, --> Paper Wins
+        // First -> rock, system -> paper, --> Paper Wins
+        // Who ever has 2 wins -> wins the game
+
+        //3
+        // ATM Simulator
+        // Balance 1000
+        // 1. Check Balance
+        // 2. Withdraw Money
+        // 3. Deposit Money
+        // 4. Exit
+        // Pin = 1234
+        // If pin is wrong -> exit
+
+
+        //4
+        const products1 = [
+            { name: "Laptop", price: 60000, stock: 10 },
+            { name: "Mouse", price: 800, stock: 3 },
+            { name: "Keyboard", price: 1200, stock: 0 },
+            { name: "Monitor", price: 15000, stock: 7 },
+            { name: "Headphones", price: 2500, stock: 2 }
+        ];
+
+        // Output should be as below.
+        // Total Inventory Value: ₹663100
+        // Most Expensive Product: Laptop priced at ₹60000
+        // Average cost of products: ₹5100
+        // Most Stocked Product: Laptop
+
+
+
+    </script>
+</body>
+
+</html>

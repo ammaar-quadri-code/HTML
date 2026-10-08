@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let student = {
+            name: "Ahmed",
+            age: 20,
+            course: "JavaScript",
+            isActive: true
+        };
+
+        // print Ahmed has choosen Javascript
+        console.log(student.name + ' has chosen ' + student.course);
+        console.log(`${student.name} has chosen ${student.course}`);
+
+        // ahmed and javascript should come from the object student from above
+
+        let colors = ["Red", "Green", "Blue", "Yellow"];
+        // print 1st last and 2nd color
+        console.log(`First: ${colors[0]} , last color: ${colors[colors.length - 1]} second color is ${colors[1]}`);
+
+
+        let marks = [80, 75, 90, 60, 234, 456, 234, 12, 3423, 34, 5234, 234, 12, 33, 4, 7562, 3412, 3];
+        console.log();
+
+        //Find total marks
+        const sum = marks[0] + marks[1] + marks[2] + marks[3]
+        // Find average
+        console.log(`total: ${sum} and average is ${sum / marks.length}`);
+
+        let students = [
+            { id: 1, name: "Ali", marks: 85 },
+            { id: 2, name: "Sara", marks: 92 },
+            { id: 3, name: "John", marks: 70 }
+        ];
+
+        //print all names
+        console.log(` ${students[0].name}, ${students[1].name}, ${students[2].name} `);
+
+        //Ali scored 85
+        console.log(`${students[0].name} scored ${students[0].marks}`);
+
+        //calculate total marks 
+        const sum1 = students[0].marks + students[1].marks + students[2].marks
+        console.log('total marks :', sum1);
+
+        let user = {
+            id: 1,
+            name: "Rahul",
+            address: {
+                city: "Hyderabad",
+                pincode: 500001
+            },
+            skills: ["HTML", "CSS", "JavaScript"]
+        };
+        // print city
+        console.log(user.address.city);
+
+        //Print second skill
+        console.log(user.skills[1]);
+
+        //without loops
+
+        let response = {
+            "products": [
+                {
+                    "id": 1,
+                    "title": "Essence Mascara Lash Princess",
+                    "description": "The Essence Mascara Lash Princess is a popular mascara known for its volumizing and lengthening effects. Achieve dramatic lashes with this long-lasting and cruelty-free formula.",
+                    "category": "beauty",
+                    "price": 9.99,
+                    "discountPercentage": 10.48,
+                    "rating": 2.56,
+                    "stock": 99,
+                    "tags": [
+                        "beauty",
+                        "mascara"
+                    ],
+                    "brand": "Essence",
+                    "sku": "BEA-ESS-ESS-001",
+                    "weight": 4,
+                    "dimensions": {
+                        "width": 15.14,
+                        "height": 13.08,
+                        "depth": 22.99
+                    },
+                    "warrantyInformation": "1 week warranty",
+                    "shippingInformation": "Ships in 3-5 business days",
+                    "availabilityStatus": "In Stock",
+                    "reviews": [
+                        {
+                            "rating": 3,
+                            "comment": "Would not recommend!",
+                            "date": "2025-04-30T09:41:02.053Z",
+                            "reviewerName": "Eleanor Collins",
+                            "reviewerEmail": "eleanor.collins@x.dummyjson.com"
+                        },
+                        {
+                            "rating": 4,
+                            "comment": "Very satisfied!",
+                            "date": "2025-04-30T09:41:02.053Z",
+                            "reviewerName": "Lucas Gordon",
+                            "reviewerEmail": "lucas.gordon@x.dummyjson.com"
+                        },
+                        {
+                            "rating": 5,
+                            "comment": "Highly impressed!",
+                            "date": "2025-04-30T09:41:02.053Z",
+                            "reviewerName": "Eleanor Collins",
+                            "reviewerEmail": "eleanor.collins@x.dummyjson.com"
+                        }
+                    ],
+                    "returnPolicy": "No return policy",
+                    "minimumOrderQuantity": 48,
+                    "meta": {
+                        "createdAt": "2025-04-30T09:41:02.053Z",
+                        "updatedAt": "2025-04-30T09:41:02.053Z",
+                        "barcode": "5784719087687",
+                        "qrCode": "https://cdn.dummyjson.com/public/qr-code.png"
+                    },
+                    "images": [
+                        "https://cdn.dummyjson.com/product-images/beauty/essence-mascara-lash-princess/1.webp"
+                    ],
+                    "thumbnail": "https://cdn.dummyjson.com/product-images/beauty/essence-mascara-lash-princess/thumbnail.webp"
+                }]
+        }
+        // print the image only
+        console.log(response.products[0].images[0]);
+
+        ///Even number (take one number and output if number is even or not)
+        // const inp = parseInt(prompt('Please enter a number'))
+        // isNaN(inp) && alert('please entervalifd number')
+        // inp%2==0 ? alert('even'): alert('odd')
+        // Max of three numbers
+
+        // const inp1=parseInt(prompt('enter number 1'))
+        const inp1 = 1000
+        const inp2 = 200
+        const inp3 = 300
+
+        if (inp1 > inp2 && inp1 > inp3) {
+            console.log(inp1 + ' is Max');
+        }
+        else if (inp2 > inp1 && inp2 > inp3) {
+            console.log(inp2 + ' is Max');
+        } else {
+            console.log(inp3 + ' is Max');
+        }
+        inp1 > inp2 && inp1 > inp3 ? console.log(inp1 + ' is Max') : inp2 > inp1 && inp2 > inp3 ? console.log(inp2 + ' is Max') : console.log(inp3 + ' is Max');
+
+        inp1 > inp2 ? inp1 > inp3 ? console.log('input 1 is greatest') : console.log('input 3 is greatest') : inp2 > inp3 ? console.log('input 2 is greatest') : console.log('input 3 is greatest')
+
+        // (take 3 numbers as input and give the maximum as output)
+    </script>
+</body>
+
+</html>
