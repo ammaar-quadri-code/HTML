@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        let balance = 10000; // Initial balance
+        let pin = 1234
+        let upin = prompt("Enter your PIN to access your account:");
+
+        while (pin == upin) {
+
+            const option = prompt("Welcome to the ATM!\n\nPlease choose an option:\n1. Check Balance\n2. Withdraw Money\n3. Deposit Money\n4. Change Pin\n5. Exit");
+
+            // if (option == 1) {
+
+            //     alert('Balance is ${balance}');
+            // } else if (option == 2) {
+            //     let withdraw = parseInt(prompt("Enter the amount to withdraw:"));
+            //     if (withdraw > balance) {
+            //         alert("Insufficient balance!");
+            //     } else {
+            //         balance -= withdraw;
+            //         alert("Withdrawal successful! New balance: " + balance);
+            //     }
+            // } else if (option == 3) {
+            //     let deposit = parseInt(prompt("Enter the amount to deposit:"));
+            //     balance += deposit;
+            //     alert("Deposit successful! New balance: " + balance);
+            // }
+            // else if (option == 4) {
+            //     let newPin = prompt("Enter your new PIN:");
+            //     pin = newPin;
+            //     alert("PIN changed successfully!");
+            // }
+            // else if (option == 5) {
+            //     alert("Thank you for using the ATM. Goodbye!");
+            //     break;
+            // } else {
+            //     alert("Invalid option. Please try again.");
+            // }
+
+            switch (option) {
+                case '1':
+                    alert('Balance is ' + balance);
+                    break;
+                case '2':
+                    let withdraw = parseInt(prompt("Enter the amount to withdraw:"));
+                    if (withdraw > balance) {
+                        alert("Insufficient balance!");
+                    } else {
+                        balance -= withdraw;
+                        alert("Withdrawal successful! New balance: " + balance);
+                    }
+                    break;
+                case '3':
+                    let deposit = parseInt(prompt("Enter the amount to deposit:"));
+                    balance += deposit;
+                    alert("Deposit successful! New balance: " + balance);
+                    break;
+                case '4':
+                    let newPin = prompt("Enter your new PIN:");
+                    pin = newPin;
+                    alert("PIN changed successfully!");
+                    break;
+                case '5':
+                    alert("Thank you for using the ATM. Goodbye!");
+                    break;
+                default:
+                    alert("Invalid option. Please try again.");
+            }
+        }
+    </script>
+</body>
+
+</html>

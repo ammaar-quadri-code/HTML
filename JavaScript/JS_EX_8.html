@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        let arr = [1, 2, 3, 4, 5,-2, 3, -5 ,11];
+        // Making the negative to 0
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] < 0) {
+                arr[i] = 0;
+            }
+        }
+        console.log(arr);
+
+        // Making the running sum of the array
+        let arr1 = [0, 23, 38, 48, 59, 60, 71, 82, 93, 100];
+        let runSum = 0;
+        for (let i = 0; i < arr1.length; i++) {
+            runSum += arr1[i];
+        }
+        console.log("Running sum: " + runSum);
+        
+        //Given a number log the multiplication table for it till 10.
+        // 5x1=5 ..... 5x10=50 (should work for any number)
+        let num = 5;
+        for (let i = 1; i <= 10; i++) {
+            console.log(num + " x " + i + " = " + (num * i));
+        }
+
+    </script>
+</body>
+</html>

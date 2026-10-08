@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        const products1 = [
+            { name: "Laptop", price: 60000, stock: 10 },
+            { name: "Mouse", price: 800, stock: 3 },
+            { name: "Keyboard", price: 1200, stock: 0 },
+            { name: "Monitor", price: 15000, stock: 7 },
+            { name: "Headphones", price: 2500, stock: 2 }
+        ];
+
+        let sum=0
+        for (let i = 0; i < products1.length; i++) {
+            const element = products1[i];
+            sum += element.price * element.stock
+        }
+        console.log("Total inventory value: " + sum);
+
+        // Most Expensive Product
+        // let mostExpensiveProduct = products1[0];
+        // for (let i = 1; i < products1.length; i++) {
+        //     const element = products1[i];
+        //     if (element.price > mostExpensiveProduct.price) {
+        //         mostExpensiveProduct = element;
+        //     }
+        // }
+        // console.log("Most expensive product: " + mostExpensiveProduct.name);
+        
+        let maxPrice = 0;
+        for (const element of products1) {
+            if (element.price > maxPrice) {
+                maxPrice = element.price;
+            }
+        }
+        console.log("Maximum price: " + maxPrice);
+        //Most Expensive Product Name
+        let mostExpensiveProductName = "";
+        for (const element of products1) {
+            if (element.price === maxPrice) {
+                mostExpensiveProductName = element.name;
+                break; // Exit the loop once the product is found
+            }
+        }
+        console.log("Most expensive product: " + mostExpensiveProductName);
+
+        //Average Cost of Product
+        let totalCost = 0;
+        let productCount = 0;
+        for (const element of products1) {
+            totalCost += element.price * element.stock;
+            productCount++;
+        }
+        let averageCost = productCount > 0 ? totalCost / productCount : 0;
+        console.log("Average cost of product: " + averageCost);
+
+        //Most Stocked Product
+        let maxStock = 0;
+        for (const element of products1) {
+            if (element.stock > maxStock) {
+                maxStock = element.stock;
+            }
+        }
+        let mostStockedProductName = "";
+        for (const element of products1) {
+            if (element.stock === maxStock) {
+                mostStockedProductName = element.name;
+                break; // Exit the loop once the product is found
+            }
+        }
+        console.log("Most stocked product: " + mostStockedProductName);
+
+    </script>
+</body>
+</html>

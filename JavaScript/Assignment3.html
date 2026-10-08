@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ROCK-PAPER-SCISSORS - Ammaar Quadri</title>
+</head>
+
+<body>
+
+    <script>
+
+        alert("ROCK-PAPER-SCISSORS\n\nBy M.A.Q. - Ammaar Quadri\n\nRules:\n1. You will play against the system.\n2. In each round, you will choose ROCK, PAPER or SCISSORS.\n3. The system will randomly choose ROCK, PAPER or SCISSORS.\n4. Rock beats Scissors.\n5. Paper beats Rock.\n6. Scissors beats Paper.\n7. If both choose the same option, the round is a DRAW.\n8. First to win 2 rounds wins the game!\n\nGood Luck!");
+
+        // Store the number of rounds won by the user
+        let userWins = 0;
+
+        // Store the number of rounds won by the system
+        let systemWins = 0;
+
+
+        // Run the game until someone wins 2 rounds
+        for (let round = 1; round <= 3; round++) {
+
+            // Ask the user to choose Rock, Paper or Scissors
+            let userChoice = prompt(
+                "Round " + round +
+                "\nChoose Rock, Paper or Scissors:"
+            );
+
+
+            // Generate a random number between 1 and 3
+            let randomNumber = Math.floor(Math.random() * 3) + 1;
+
+
+            // Convert the random number into Rock, Paper or Scissors
+            let systemChoice;
+
+            if (randomNumber == 1) {
+                systemChoice = "rock";
+            }
+            else if (randomNumber == 2) {
+                systemChoice = "paper";
+            }
+            else {
+                systemChoice = "scissors";
+            }
+
+
+            // Convert user's choice to lowercase
+            userChoice = userChoice.toLowerCase();
+
+
+            // Show both choices
+            alert(
+                "Your Choice: " + userChoice +
+                "\nSystem Choice: " + systemChoice
+            );
+
+
+            // Check if both choices are the same
+            if (userChoice == systemChoice) {
+
+                alert("Round " + round + " is a DRAW!");
+
+            }
+
+
+            // User chooses Rock and system chooses Scissors
+            else if (userChoice == "rock" && systemChoice == "scissors") {
+
+                alert("You won Round " + round + "!");
+                userWins++;
+
+            }
+
+
+            // User chooses Paper and system chooses Rock
+            else if (userChoice == "paper" && systemChoice == "rock") {
+
+                alert("You won Round " + round + "!");
+                userWins++;
+
+            }
+
+
+            // User chooses Scissors and system chooses Paper
+            else if (userChoice == "scissors" && systemChoice == "paper") {
+
+                alert("You won Round " + round + "!");
+                userWins++;
+
+            }
+
+
+            // In all other cases, system wins
+            else {
+
+                alert("System won Round " + round + "!");
+                systemWins++;
+
+            }
+
+
+            // Check if someone has already won 2 rounds
+            if (userWins == 2 || systemWins == 2) {
+                break;
+            }
+
+        }
+
+
+        // Check the final winner
+        if (userWins == 2) {
+
+            alert(
+                "🎉 YOU WON THE GAME!" +
+                "\nYou won " + userWins + " rounds." +
+                "\n\nM.A.Q. - Ammaar Quadri"
+            );
+
+        }
+        else if (systemWins == 2) {
+
+            alert(
+                "💻 SYSTEM WON THE GAME!" +
+                "\nSystem won " + systemWins + " rounds." +
+                "\n\nM.A.Q. - Ammaar Quadri"
+            );
+
+        }
+        else {
+
+            alert(
+                "The game ended in a DRAW!" +
+                "\n\nM.A.Q. - Ammaar Quadri"
+            );
+
+        }
+
+    </script>
+
+</body>
+
+</html>

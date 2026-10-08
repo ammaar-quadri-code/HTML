@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ATM-SIMULATOR - Ammaar Quadri</title>
+</head>
+
+<body>
+
+    <script>
+
+        // Display ATM introduction and rules
+        alert("ATM SIMULATOR\n\nBy M.A.Q. - Ammaar Quadri\n\nRules:\n1. Your starting balance is ₹1000.\n2. Enter the correct PIN to access your account.\n3. You can check your balance.\n4. You can withdraw money.\n5. You can deposit money.\n6. You can exit the ATM anytime.\n\nPIN: 1234");
+
+
+        // Store the correct PIN
+        let correctPin = 1234;
+
+        // Ask the user to enter the PIN
+        let pin = Number(prompt("Enter your 4-digit PIN:"));
+
+
+        // Check whether the entered PIN is correct
+        if (pin != correctPin) {
+
+            // Display error message
+            alert("Incorrect PIN!\n\nAccess Denied.\n\nM.A.Q. - Ammaar Quadri");
+
+        }
+
+        // If PIN is correct, continue to ATM
+        else {
+
+            // Starting account balance
+            let balance = 1000;
+
+            // Keep showing the ATM menu
+            while (true) {
+
+                // Display ATM menu
+                let choice = Number(
+                    prompt(
+                        "ATM MENU\n\n" +
+                        "1. Check Balance\n" +
+                        "2. Withdraw Money\n" +
+                        "3. Deposit Money\n" +
+                        "4. Exit\n\n" +
+                        "Enter your choice:"
+                    )
+                );
+
+
+                // Option 1 - Check Balance
+                if (choice == 1) {
+
+                    alert(
+                        "Your current balance is ₹" + balance +
+                        "\n\nM.A.Q. - Ammaar Quadri"
+                    );
+
+                }
+
+
+                // Option 2 - Withdraw Money
+                else if (choice == 2) {
+
+                    let withdrawAmount = Number(
+                        prompt("Enter amount to withdraw:")
+                    );
+
+
+                    // Check if withdrawal amount is valid
+                    if (withdrawAmount <= 0) {
+
+                        alert("Please enter a valid amount.");
+
+                    }
+
+                    // Check if enough balance is available
+                    else if (withdrawAmount > balance) {
+
+                        alert("Insufficient Balance!");
+
+                    }
+
+                    // If everything is valid
+                    else {
+
+                        balance = balance - withdrawAmount;
+
+                        alert(
+                            "Withdrawal Successful!\n\n" +
+                            "Amount Withdrawn: ₹" + withdrawAmount +
+                            "\nRemaining Balance: ₹" + balance
+                        );
+
+                    }
+
+                }
+
+
+                // Option 3 - Deposit Money
+                else if (choice == 3) {
+
+                    let depositAmount = Number(
+                        prompt("Enter amount to deposit:")
+                    );
+
+
+                    // Check if deposit amount is valid
+                    if (depositAmount <= 0) {
+
+                        alert("Please enter a valid amount.");
+
+                    }
+
+                    // If deposit amount is valid
+                    else {
+
+                        balance = balance + depositAmount;
+
+                        alert(
+                            "Deposit Successful!\n\n" +
+                            "Amount Deposited: ₹" + depositAmount +
+                            "\nNew Balance: ₹" + balance
+                        );
+
+                    }
+
+                }
+
+
+                // Option 4 - Exit
+                else if (choice == 4) {
+
+                    alert(
+                        "Thank you for using ATM Simulator!\n\n" +
+                        "M.A.Q. - Ammaar Quadri"
+                    );
+
+                    break;
+
+                }
+
+
+                // If user enters anything other than 1-4
+                else {
+
+                    alert("Invalid Choice!\nPlease select a number from 1 to 4.");
+
+                }
+
+            }
+
+        }
+
+    </script>
+
+</body>
+
+</html>

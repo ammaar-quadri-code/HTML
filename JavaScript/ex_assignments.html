@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+
+        // ATM stimulator
+        // balance 1000
+        //pin 1234
+        // prompt enter the pin
+        // start ATM
+        // // withdraw, depost, check balance, exit
+        let balance = 10000
+        let pin = 1234
+        // let upin = prompt('Enter the Pin')
+        // while (pin == upin) {
+        // 0-> balance
+        //1-> withdraw
+        //2-> deposit
+        //3-> exit
+        // 4-> pin change
+        // const option = prompt('Please enter  0-> balance, 1-> withdraw ,2-> deposit, 4-> exit, 3-> pin change')
+        // if (option == 0) {
+        //     alert(`Balance is ${balance}`)
+        // } else if (option == 1) {
+        //     let withdraw = parseInt(prompt('Enter the amount to withdraw'))
+        //     if (withdraw > balance) {
+        //         alert(' Insufficient balance')
+        //     } else {
+        //         balance = balance - withdraw
+        //         alert(`Balance after withdrawal is ${balance}`)
+        //     }
+        // } else if (option == 2) {
+        //     let depost = parseInt(prompt('Enter the amount to deposit'))
+        //     balance = balance + depost
+        //     alert(`Balance after deposit is ${balance}`)
+        // }
+        // else if (option == 3) {
+        //     let updatedPin = prompt('Enter the new pin')
+        //     pin = updatedPin
+        //     alert('Pin updated successfully to' + pin)
+        // } else {
+        //     break
+        // }
+
+        // }
+        // alert('Thank you for banking')
+        const products1 = [
+            { name: "Laptop", price: 60000, stock: 10 },
+            { name: "Mouse", price: 800, stock: 3 },
+            { name: "Keyboard", price: 1200, stock: 0 },
+            { name: "Monitor", price: 15000, stock: 7 },
+            { name: "Headphones", price: 2500, stock: 2 },
+            { name: "Headphones2", price: 750000, stock: 2 },
+            { name: "Laptop1", price: 60000, stock: 10 },
+            { name: "Mouse1", price: 800, stock: 300 },
+            { name: "Keyboard1", price: 1200, stock: 0 },
+            { name: "Monitor1", price: 15000, stock: 7 },
+            { name: "Headphones1", price: 2500000, stock: 2 },
+            { name: "Headphones21", price: 750000, stock: 2 }
+        ];
+
+        // for (let index = 0; index < products1.length; index++) {
+        //     const element = products1[index];
+        //     let Inventory= element.price*element.stock
+
+        //     sum= sum+Inventory
+
+        // } //possible to do this this way
+        let sum = 0
+        let priceTotal = 0
+        let maxPrice = 0
+        let expProduct = ''
+        let stock = 0
+        let mostProd = ''
+        for (const element of products1) {
+            sum = sum + element.price * element.stock
+            priceTotal = priceTotal + element.price
+            if (element.price > maxPrice) {
+                maxPrice = element.price
+                expProduct = element.name
+            }
+            if (element.stock > stock) {
+                stock = element.stock
+                mostProd = element.name
+            }
+        }
+        console.log(`total inventory value: ${sum}`);
+        console.log(`Most Expensive Product: ${expProduct} priced at ${maxPrice}`);
+        console.log(`total inventory value: ${priceTotal / products1.length}`);
+        console.log(`Most stocked Product: ${mostProd} stocked at ${stock}`);
+
+        //  variables, array indexes, positions, loops, conditions.
+
+        // givena  arrau of numbers [0,1,23,4,5,51,-2,3,-5,6,1]
+        //1. make it only posiitibve [0,1,23,0,3,0]
+        //2. Running sum of list [0,1,24,28,33,84,82,85,90,96,97]
+        //given a number log the multiplication table for it till 10.
+        //5 x1=5
+        //5x2=10...5x10=50
+        // Check if List is Sorted
+        // Find Second Largest Number
+        // Find All Duplicate numbers in a list
+        // Maximum Difference in a List
+        // Palindrome Number Check for a list of numbers
+        </script>
+</body>
+
+</html>

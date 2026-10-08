@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PRODUCT-INVENTORY - Ammaar Quadri</title>
+</head>
+
+<body>
+
+    <script>
+
+        // Display assignment introduction
+        alert("PRODUCT INVENTORY ANALYSIS\n\nBy M.A.Q. - Ammaar Quadri\n\nThe program will analyze the products and display:\n1. Total Inventory Value\n2. Most Expensive Product\n3. Average Cost of Products\n4. Most Stocked Product\n\nLet's begin!");
+
+
+        // Store product information in an array of objects
+        const products1 = [
+            { name: "Laptop", price: 60000, stock: 10 },
+            { name: "Mouse", price: 800, stock: 3 },
+            { name: "Keyboard", price: 1200, stock: 0 },
+            { name: "Monitor", price: 15000, stock: 7 },
+            { name: "Headphones", price: 2500, stock: 2 }
+        ];
+
+
+        // Variable to store total inventory value
+        let totalInventoryValue = 0;
+
+        // Variable to store total price of all products
+        let totalPrice = 0;
+
+        // Assume the first product is the most expensive initially
+        let mostExpensiveProduct = products1[0];
+
+        // Assume the first product has the most stock initially
+        let mostStockedProduct = products1[0];
+
+
+        // Loop through every product
+        for (let i = 0; i < products1.length; i++) {
+
+            // Get the current product
+            let product = products1[i];
+
+
+            // Calculate inventory value
+            totalInventoryValue =
+                totalInventoryValue + (product.price * product.stock);
+
+
+            // Add product price to total price
+            totalPrice = totalPrice + product.price;
+
+
+            // Check for the most expensive product
+            if (product.price > mostExpensiveProduct.price) {
+
+                mostExpensiveProduct = product;
+
+            }
+
+
+            // Check for the most stocked product
+            if (product.stock > mostStockedProduct.stock) {
+
+                mostStockedProduct = product;
+
+            }
+
+        }
+
+
+        // Calculate average cost
+        let averageCost = totalPrice / products1.length;
+
+
+        // Display the final output
+        alert(
+            "PRODUCT INVENTORY ANALYSIS\n\n" +
+            "Total Inventory Value: ₹" + totalInventoryValue +
+            "\nMost Expensive Product: " + mostExpensiveProduct.name +
+            " priced at ₹" + mostExpensiveProduct.price +
+            "\nAverage Cost of Products: ₹" + averageCost +
+            "\nMost Stocked Product: " + mostStockedProduct.name +
+            "\n\nM.A.Q. - Ammaar Quadri"
+        );
+
+    </script>
+
+</body>
+
+</html>
