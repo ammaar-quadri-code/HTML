@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        // Task 1 - Making -ve number 0
+
+        let arr = [1, 2, -3, -4, 5];
+
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] < 0) {
+                arr[i] = 0
+            }
+        }
+        console.log("Task 1:", arr)
+
+        // Task 2 - Running sum of an array
+
+        let arr1 = [10, 20, 33, 45, 56];
+
+        for (let i = 1; i < arr1.length; i++) {
+            arr1[i] = arr1[i] + arr1[i - 1];
+        }
+        console.log("Task 2:", arr1)
+
+        // Task 3 - Multiplication Table
+
+        let num = 96;
+
+        for (let i = 1; i <= 10; i++) {
+            console.log(num + "x" + i + "=" + (num * i))
+        }
+
+        // Task -4 - Check if the list is sorted
+
+        let arr2 = [4, 1, 5, 2, 3, 10]
+
+        let sorted = true
+
+        for (let i = 0; i < arr2.length - 1; i++) {
+            if (arr2[i] > arr2[i + 1]) {
+                sorted = false
+                break;
+            }
+        }
+
+        if (sorted) {
+            console.log("Task 4: List is sorted.");
+        } else {
+            console.log("Task 4 : List is not sorted")
+        }
+
+        // Task 5 - Find second Largest Number
+
+        let arr3 = [10, 5, 20, 30, 25, 55, 65]
+
+        let largest = arr[0]
+        let secondLargest = arr3[0]
+
+        for (let i = 1; i < arr3.length; i++) {
+
+            if (arr3[i] > largest) {
+                secondLargest = largest
+                largest = arr3[i];
+            }
+            else if (arr3[i] > secondLargest && arr3[i] != largest) {
+                secondLargest = arr3[i];
+            }
+
+        }
+        console.log("Task 5 : Second Largest =", secondLargest)
+
+    </script>
+</body>
+
+</html>
