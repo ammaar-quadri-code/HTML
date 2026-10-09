@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    // ============================================================
+    // TASK 1 - Making Negative Numbers to 0
+    // ============================================================
+
+    let arr = [1, 2, 3, 4, 5, -2, 3, -5, 11];
+
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] < 0) {
+            arr[i] = 0;
+        }
+    }
+
+    console.log("Task 1:", arr);
+
+
+    // ============================================================
+    // TASK 2 - Running Sum of an Array
+    // ============================================================
+
+    let arr1 = [0, 23, 38, 48, 59, 60, 71, 82, 93, 100];
+
+    // Add the previous number to the current number
+    for (let i = 1; i < arr1.length; i++) {
+        arr1[i] = arr1[i] + arr1[i - 1];
+    }
+
+    console.log("Task 2:", arr1);
+
+
+    // ============================================================
+    // TASK 3 - Multiplication Table
+    // ============================================================
+
+    let num = 5;
+
+    for (let i = 1; i <= 10; i++) {
+        console.log(num + " x " + i + " = " + (num * i));
+    }
+
+
+    // ============================================================
+    // TASK 4 - Check if List is Sorted
+    // ============================================================
+
+    let arr2 = [4, 1, 5, 2, 3, 6, 7, 8, 9];
+
+    let sorted = true;
+
+    for (let i = 0; i < arr2.length - 1; i++) {
+
+        // If current number is greater than next number
+        // then the list is not sorted
+        if (arr2[i] > arr2[i + 1]) {
+            sorted = false;
+            break;
+        }
+    }
+
+    if (sorted) {
+        console.log("Task 4: List is Sorted");
+    } else {
+        console.log("Task 4: List is NOT Sorted");
+    }
+
+
+    // ============================================================
+    // TASK 5 - Find Second Largest Number
+    // ============================================================
+
+    let arr3 = [10, 5, 20, 8, 15];
+
+    let largest = arr3[0];
+    let secondLargest = arr3[0];
+
+    for (let i = 1; i < arr3.length; i++) {
+
+        if (arr3[i] > largest) {
+            secondLargest = largest;
+            largest = arr3[i];
+        }
+        else if (arr3[i] > secondLargest && arr3[i] != largest) {
+            secondLargest = arr3[i];
+        }
+    }
+
+    console.log("Task 5: Second Largest =", secondLargest);
+
+
+    // // ============================================================
+    // // TASK 6 - Find All Duplicate Numbers
+    // // ============================================================
+
+    // let arr4 = [1, 2, 3, 2, 4, 5, 3, 6, 1];
+
+    // let duplicates = [];
+
+    // for (let i = 0; i < arr4.length; i++) {
+
+    //     for (let j = i + 1; j < arr4.length; j++) {
+
+    //         if (arr4[i] == arr4[j] && !duplicates.includes(arr4[i])) {
+    //             duplicates.push(arr4[i]);
+    //         }
+    //     }
+    // }
+
+    // console.log("Task 6: Duplicate Numbers =", duplicates);
+
+
+    // ============================================================
+    // TASK 7 - Maximum Difference in a List
+    // ============================================================
+
+    let arr5 = [10, 3, 25, 8, 15];
+
+    let min = arr5[0];
+    let max = arr5[0];
+
+    for (let i = 1; i < arr5.length; i++) {
+
+        if (arr5[i] < min) {
+            min = arr5[i];
+        }
+
+        if (arr5[i] > max) {
+            max = arr5[i];
+        }
+    }
+
+    let difference = max - min;
+
+    console.log("Task 7: Maximum Difference =", difference);
+
+
+    // // ============================================================
+    // // TASK 8 - Palindrome Number Check for a List
+    // // ============================================================
+
+    // let arr6 = [121, 123, 454, 789, 1221];
+
+    // for (let i = 0; i < arr6.length; i++) {
+
+    //     let num = arr6[i];
+    //     let original = num;
+    //     let reverse = 0;
+
+    //     while (num > 0) {
+
+    //         let digit = num % 10;
+    //         reverse = reverse * 10 + digit;
+    //         num = Math.floor(num / 10);
+    //     }
+
+    //     if (original == reverse) {
+    //         console.log("Task 8:", original, "is Palindrome");
+    //     } else {
+    //         console.log("Task 8:", original, "is NOT Palindrome");
+    //     }
+    // }
+
+</script>-
+</body>
+</html>

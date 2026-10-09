@@ -20,18 +20,32 @@
         // Making the running sum of the array
         let arr1 = [0, 23, 38, 48, 59, 60, 71, 82, 93, 100];
         let runSum = 0;
-        for (let i = 0; i < arr1.length; i++) {
-            runSum += arr1[i];
+
+        //1st number should be 0, 2nd number should be 0+23=23, and so on.
+        for (let i = 1; i < arr1.length; i++) {
+            arr1[i] = arr1[i] + arr1[i - 1];
         }
-        console.log("Running sum: " + runSum);
-        
+        console.log(arr1);
         //Given a number log the multiplication table for it till 10.
         // 5x1=5 ..... 5x10=50 (should work for any number)
-        let num = 5;
+        let num = 5;    
         for (let i = 1; i <= 10; i++) {
             console.log(num + " x " + i + " = " + (num * i));
         }
-
+        
+        // Check if List is Sorted
+        let arr2 = [4, 1, 5, 2, 3, 6, 7, 8, 9];
+        
+        // Find Second Largest Number
+        
+        
+        
     </script>
 </body>
 </html>
+
+        // for (let i = 0; i < arr1.length; i++) {
+        //     runSum += arr1[i];
+        // }
+        // console.log("Running sum: " + runSum);
+        
