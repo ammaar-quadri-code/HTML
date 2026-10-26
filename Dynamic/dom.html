@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Hello</h1>
+    <h1 id="some">Hello</h1>
+    <h1 id="remove">Hello</h1>
+
+    <div id="card">
+        <button id="inner">
+            Hello
+        </button>
+
+    </div>
+
+    <script>
+
+        //selecting an ekement
+        /// document.querySelector()
+        const heading = document.querySelector('#some');
+        console.log(heading);
+        console.log(document.querySelectorAll('h1').forEach(a => a.style.color = 'red'));
+
+        // document.getElementID, class, Name
+        console.log(document.getElementById('some'))
+
+        // Updating and element
+        heading.textContent = '<i>SDHUB</i>'
+        heading.innerHTML = '<i>SDHUB</i>'
+
+        //removing an element
+        document.querySelector('#remove').remove()
+
+        //creating
+        const btn = document.createElement('button')
+        btn.textContent = 'Click'
+        btn.style.backgroundColor = 'green'
+        document.body.appendChild(btn)
+        console.log(btn)
+
+        document.body.addEventListener('click',()=> console.log("Body clicked"))
+        document.querySelector('#card').addEventListener('click',()=> console.log("Div clicked"))
+        document.querySelector('#inner').addEventListener('click',()=> console.log("item clicked"))
+       
+
+
+        // const h1 = document.querySelector("h1");
+        // console.log(h1);
+
+        // const h1s = document.querySelectorAll("h1");
+        // console.log(h1s);
+
+        // const some = document.getElementById("some");
+        // console.log(some);
+
+        // const remove = document.getElementById("remove");
+        // remove.remove();
+
+
+
+
+    </script>
+</body>
+
+</html>

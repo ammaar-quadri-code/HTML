@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        const dt = new Date
+        const dt2 = new Date(2003, 0, 23, 5)
+        console.log(dt2)
+
+        console.log(dt.setHours(20))
+        console.log(dt.setDate(dt.getDate() + 10)); //[present day +10]
+        console.log(dt.getDay()); //Starts on Sunday and Indexed
+        console.log(dt.getMonth())
+
+
+        // Find the number of days since somebody born
+        console.log('Find the number of days since somebody born')
+        const today = new Date();
+        const birthDate = new Date(2003, 0, 23); // 23 Jan 2003
+
+        const difference = today - birthDate;
+
+
+        const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+
+        console.log("Days since birth:", days);
+
+
+        // Find the days present in 70 years.
+
+
+
+    </script>
+</body>
+
+</html>

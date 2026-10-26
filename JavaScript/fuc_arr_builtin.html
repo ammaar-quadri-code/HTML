@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        function hello() {
+            console.log("hello tajamul");
+            console.log("hello test");
+            console.log("hello sdhub");
+
+        }
+
+        function hello() {
+            console.log("hello tajamul");
+            console.log("hello test");
+            console.log("hello sdhub");
+
+        }
+        const products1 = [
+            { name: "Laptop", price: 60000, stock: 10 },
+            { name: "Mouse", price: 800, stock: 3 },
+            { name: "Keyboard", price: 1200, stock: 0 },
+            { name: "Monitor", price: 15000, stock: 7 },
+            { name: "Headphones", price: 2500, stock: 2 },
+            { name: "Headphones2", price: 750000, stock: 2 },
+            { name: "Laptop1", price: 60000, stock: 10 },
+            { name: "Mouse1", price: 800, stock: 300 },
+            { name: "Keyboard1", price: 1200, stock: 0 },
+            { name: "Monitor1", price: 15000, stock: 7 },
+            { name: "Headphones1", price: 2500000, stock: 2 },
+            { name: "Headphones21", price: 750000, stock: 2 }
+        ];
+
+        function productDetails(productArray) {
+
+            let sum = 0
+            let priceTotal = 0
+            let maxPrice = 0
+            let expProduct = ''
+            let stock = 0
+            let mostProd = ''
+            for (const element of productArray) {
+                sum = sum + element.price * element.stock
+                priceTotal = priceTotal + element.price
+                if (element.price > maxPrice) {
+                    maxPrice = element.price
+                    expProduct = element.name
+                }
+                if (element.stock > stock) {
+                    stock = element.stock
+                    mostProd = element.name
+                }
+            }
+            console.log(`total inventory value: ${sum}`);
+            console.log(`Most Expensive Product: ${expProduct} priced at ${maxPrice}`);
+            console.log(`total inventory value: ${priceTotal / products1.length}`);
+            console.log(`Most stocked Product: ${mostProd} stocked at ${stock}`);
+
+        }
+
+
+
+        const products2 = [
+            { name: "Laptop", price: 1, stock: 3 },
+            { name: "Mouse", price: 2, stock: 3 },
+            { name: "Keyboard", price: 3, stock: 0 },
+            { name: "Monitor", price: 4, stock: 7 },
+            { name: "Headphones", price: 5, stock: 2 },
+        ];
+
+        const products3 = [
+            { name: "abc", price: 60000, stock: 3 },
+            { name: "Mou", price: 800, stock: 3 },
+            { name: "Keyboard", price: 1200, stock: 0 },
+            { name: "Monitor", price: 15000, stock: 7 },
+            { name: "Headphones", price: 2500, stock: 2 },
+            { name: "Headphones2", price: 750000, stock: 2 },
+            { name: "Laptop1", price: 60000, stock: 10 },
+            { name: "this is 3rd product", price: 800, stock: 300 },
+            { name: "Keyboard1", price: 1200, stock: 0 },
+            { name: "Monitor1", price: 15000, stock: 7 },
+            { name: "Headphones1", price: 2500000, stock: 2 },
+            { name: "Headphones21", price: 750000, stock: 2 }
+        ];
+
+        greet("tajamul") // this works due to hoisting
+        function greet(name = 'john') {
+            console.log('hello kaisae hai ?? ' + name);
+        }
+        function calculatedAge(num) {
+            console.log('My age is ' + num);
+        }
+        const add = function (number1, number2) {
+            return number1 + number2
+        }
+        const multipy = (a, b) => { // arrow function
+            console.log(a * b);
+            return a * b
+        }
+
+        const salam = name => 'salam' + name  // WHEN ONE PARAMETER  no need for brackets as well
+        const subs = (a, b) => a - b // when single line code, no need for paranthesis and return statment it will automatically return
+        function calculateAge2(n1, n3, n4, n5, n6 = 5) {
+            let a = add(n1, n3)
+            let b = add(n4, n5)
+            let mul = multipy(a, b)
+
+            console.log('My age is' + mul);
+            return 'my name is ' + mul
+        }
+        //above 3 methods to rwite a function
+
+
+        productDetails(products1)
+        productDetails(products2)
+        productDetails(products2)
+        multipy(123, 43)
+        // multipy('thakam,',32)
+        add(4, 5)
+        add(4123, 5444)
+        greet('mudassir')
+        greet('tajamul')
+        greet('sdhub')
+        hello()
+        hello()
+        hello()
+        // 4 numbers, 2, 3,4,5 2+3,4+5, 5*9, myAge -
+        console.log(add(1000, 2000))
+        calculatedAge(multipy(add(2, 3), add(4, 5)))
+        greet(calculateAge2(4, 5, 6, 7))
+        console.log(subs(6, 4));
+        console.log(salam('HASEEEB'));
+        greet()
+
+        // string methods
+        let a = 'salam ammaar '
+        console.log(a.length);
+        console.log(a.toUpperCase());
+        console.log(a.toUpperCase().toLowerCase());
+        console.log('LOL BRO - DO IT ON YOUR OWN'.toLowerCase());
+        console.log(a.charAt(6));
+        console.log(a.charCodeAt(6)); //Ascii values
+        console.log('A'.charCodeAt(0)); //Ascii values
+        console.log(a.concat(' ', 'how are you'));
+        console.log(a);  // original string is not changed
+
+        // string checks
+        console.log(a.endsWith());
+        console.log(a.endsWith('ammaar'));
+
+        console.log(a.startsWith('salam'));
+        console.log(a.startsWith('salam', 0)); // 0 is the index
+
+        console.log('ammaar.sdhub@gmail.com'.includes('sdhub')); // true
+        console.log('ammaar.sdhub@gmail.com'.indexOf('sdhub')); // Gives the position of the value in the string
+        console.log('ammaar@.sdhub@gmail.com'.lastIndexOf('sdhub')); // Gives the last position of the value in the string
+
+        console.log('ammaar.sdhub@gmail.com'.padStart(30, '0')); // adds 0 to the start of the string until it reaches length 30    
+        console.log('ammaar.sdhub@gmail.com'.padEnd(30, '0')); // adds 0 to the end of the string until it reaches length 30
+
+        console.log(a.repeat(3)); // repeats the string 3 times
+        console.log(a.replace('ammaar', 'sdhub')); // replaces the first occurrence of the string
+        console.log(a.replaceAll('a', '@')); // replaces all occurrences of the string
+
+        console.log(a.slice(0, 5)); // returns the string from index 0 to 5
+
+        console.log(a.split(' ')); // splits the string into an array of strings
+        console.log(a.split('')); // splits the string into an array of characters
+
+        console.log(a.substring(0, 5)); // returns the string from index 0 to 5
+        console.log(a.trim()); // removes whitespace from both ends of the string   
+
+
+    </script>
+
+</body>
+
+</html>

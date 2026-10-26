@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        //Pure & Impure Functions
+
+        const add = (a, b) => a + b; //pure function because it is not dependent on any external variable
+        let discount = 90
+
+        discount = 80
+
+        function discountedRate(total, discount) { //not dependent on any external variable
+            return total - (total * discount / 100);
+        }
+
+        function discountedRate2(total) { // impure function because it is dependent on external variable
+            discount = 50
+            return total - discount * total / 100
+        }
+
+        console.log(discountedRate(500, 10));
+        console.log(discountedRate2(500));
+
+        discount = 20
+
+        console.log(discountedRate(500, 10));
+        console.log(discountedRate2(500));
+
+        add(2, 5)
+        add(2, 5)
+
+
+        // Higher order -> Function which takes another function as an argument or returns a function as a result is called higher order function
+
+        // let squareSide = 5
+
+        function areaOfSquare(s) {
+            return "Area of Square is: " + s * s
+        }
+
+        function parameterOfSquare(s) {
+            return "Parameter of Square is: " + 4 * s
+        }
+
+        function diagonalOfSquare(s) {
+            return "Diagonal of Square is: " + Math.sqrt(2) * s
+        }
+
+        // function logAll(s) {
+        //     console.log(areaOfSquare(s))
+        //     parameterOfSquare(s)
+        //     diagonalOfSquare(s)
+        // }   
+        
+        // // console.log(logAll(squareSide));
+
+        // logAll(squareSide)
+
+        function prints(cb, s){
+            
+            console.log(cb(s))
+        }
+
+        prints(areaOfSquare,5) //logic is seperated.
+        prints(parameterOfSquare,5)
+        prints(diagonalOfSquare,5)
+
+
+
+
+    </script>
+</body>
+
+</html>

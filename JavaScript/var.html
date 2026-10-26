@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        // string methods
+        let a = 'salam ammaar '
+        console.log(a.length);
+        console.log(a.toUpperCase());
+        console.log(a.toUpperCase().toLowerCase());
+        console.log('LOL BRO - DO IT ON YOUR OWN'.toLowerCase());
+        console.log(a.charAt(6));
+        console.log(a.charCodeAt(6)); //Ascii values
+        console.log('A'.charCodeAt(0)); //Ascii values
+        console.log(a.concat(' ', 'how are you'));
+        console.log(a);  // original string is not changed
+
+        // string checks
+        console.log(a.endsWith());
+        console.log(a.endsWith('ammaar'));
+
+        console.log(a.startsWith('salam'));
+        console.log(a.startsWith('salam', 0)); // 0 is the index
+
+        console.log('ammaar.sdhub@gmail.com'.includes('sdhub')); // true
+        console.log('ammaar.sdhub@gmail.com'.indexOf('sdhub')); // Gives the position of the value in the string
+        console.log('ammaar@.sdhub@gmail.com'.lastIndexOf('sdhub')); // Gives the last position of the value in the string
+
+        console.log('ammaar.sdhub@gmail.com'.padStart(30, '0')); // adds 0 to the start of the string until it reaches length 30    
+        console.log('ammaar.sdhub@gmail.com'.padEnd(30, '0')); // adds 0 to the end of the string until it reaches length 30
+
+        console.log(a.repeat(3)); // repeats the string 3 times
+        console.log(a.replace('ammaar', 'sdhub')); // replaces the first occurrence of the string
+        console.log(a.replaceAll('a', '@')); // replaces all occurrences of the string
+
+        console.log(a.slice(0, 5)); // returns the string from index 0 to 5
+
+        console.log(a.split(' ')); // splits the string into an array of strings
+        console.log(a.split('')); // splits the string into an array of characters
+
+        console.log(a.substring(0, 5)); // returns the string from index 0 to 5
+        console.log(a.trim()); // removes whitespace from both ends of the string   
+
+
+    </script>
+</body>
+</html>

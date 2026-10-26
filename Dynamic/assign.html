@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 style="display: inline;">Hello</h1>
+    <h1 id="some">Hello</h1>
+    <div class="card">
+        <!-- btn -->
+    </div>
+    <div class="card1">
+        <!-- btn -->
+        <button id="bb">Hello</button>
+    </div>
+    <input type="text" name="" id="inp">
+    <input type="text" name="" id="inp1">
+    <h1 id="remove">Hello</h1>
+
+
+    <script>
+        // selecting an element
+        // document.querySelector()
+        const heading = document.querySelector('#some')
+        console.log(heading);
+        console.log(document.querySelectorAll('h1').forEach(a => a.style.color = 'red'));
+
+        // docuemnt.getElementID,class,Name
+        console.log(document.getElementById('some'));
+
+        //Updating an element
+        heading.textContent = '<i>SDHUB</i>'
+        heading.innerHTML = '<i>SDHUB</i>'
+
+        //removing an element
+        document.querySelector('#remove').remove()
+
+        //creating
+        const btn = document.createElement('button')
+        btn.textContent = 'click'
+        btn.style.backgroundColor = 'green'
+        console.log(btn);
+        //creating
+        const btn2 = document.createElement('button')
+        btn2.textContent = 'click'
+        btn2.style.backgroundColor = 'green'
+        console.log(btn2);
+
+        // document.body.appendChild(btn)
+        document.querySelector('.card').appendChild(btn)
+        document.querySelector('.card1').appendChild(btn2)
+
+
+        //attributes
+        document.querySelector('button').setAttribute('class', 'primary')
+        console.log(document.querySelector('button').getAttribute('class'));
+
+
+
+        // events
+        document.querySelector('h1').addEventListener('click', () => {
+            heading.style.backgroundColor = 'blue'
+            if (heading.textContent == 'SDHUB') {
+                heading.textContent = 'MEHdipatnam'
+
+            } else {
+                heading.textContent = 'SDHUB'
+            }
+        })
+        // inputs
+        document.querySelector('#inp').addEventListener('keyup', (e) => {
+            // element-> target -> value
+            heading.textContent = e.target.value
+        })
+
+
+
+        document.querySelector('#inp1').addEventListener('change', (e) => {
+            document.querySelector('h1').textContent = e.target.value
+        })
+
+
+        document.body.addEventListener('click', () => console.log('body clicked'))
+        document.querySelector('.card1').addEventListener('click', () => console.log('div clicked'), true)
+        document.querySelector('#bb').addEventListener('click', () => console.log('button clicked'))
+
+
+        const source = document.querySelector("h1");
+
+        source.addEventListener("copy", (event) => {
+            const selection = document.getSelection();
+            event.clipboardData.setData("text/plain", 'why are you copyhing write your own answers');
+            event.preventDefault();
+        });
+        /// 
+
+        // input ,button -> password show /hide 
+
+    </script>
+</body>
+
+</html>

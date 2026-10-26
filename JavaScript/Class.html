@@ -95,25 +95,25 @@
     console.log("Task 5: Second Largest =", secondLargest);
 
 
-    // // ============================================================
-    // // TASK 6 - Find All Duplicate Numbers
-    // // ============================================================
+    // ============================================================
+    // TASK 6 - Find All Duplicate Numbers
+    // ============================================================
 
-    // let arr4 = [1, 2, 3, 2, 4, 5, 3, 6, 1];
+    let arr4 = [1, 2, 3, 2, 4, 5, 3, 6, 1];
 
-    // let duplicates = [];
+    let duplicates = [];
 
-    // for (let i = 0; i < arr4.length; i++) {
+    for (let i = 0; i < arr4.length; i++) {
 
-    //     for (let j = i + 1; j < arr4.length; j++) {
+        for (let j = i + 1; j < arr4.length; j++) {
 
-    //         if (arr4[i] == arr4[j] && !duplicates.includes(arr4[i])) {
-    //             duplicates.push(arr4[i]);
-    //         }
-    //     }
-    // }
+            if (arr4[i] == arr4[j] && !duplicates.includes(arr4[i])) {
+                duplicates.push(arr4[i]);
+            }
+        }
+    }
 
-    // console.log("Task 6: Duplicate Numbers =", duplicates);
+    console.log("Task 6: Duplicate Numbers =", duplicates);
 
 
     // ============================================================
@@ -141,31 +141,31 @@
     console.log("Task 7: Maximum Difference =", difference);
 
 
-    // // ============================================================
-    // // TASK 8 - Palindrome Number Check for a List
-    // // ============================================================
+    // ============================================================
+    // TASK 8 - Palindrome Number Check for a List
+    // ============================================================
 
-    // let arr6 = [121, 123, 454, 789, 1221];
+    let arr6 = [121, 123, 454, 789, 1221];
 
-    // for (let i = 0; i < arr6.length; i++) {
+    for (let i = 0; i < arr6.length; i++) {
 
-    //     let num = arr6[i];
-    //     let original = num;
-    //     let reverse = 0;
+        let num = arr6[i];
+        let original = num;
+        let reverse = 0;
 
-    //     while (num > 0) {
+        while (num > 0) {
 
-    //         let digit = num % 10;
-    //         reverse = reverse * 10 + digit;
-    //         num = Math.floor(num / 10);
-    //     }
+            let digit = num % 10;
+            reverse = reverse * 10 + digit;
+            num = Math.floor(num / 10);
+        }
 
-    //     if (original == reverse) {
-    //         console.log("Task 8:", original, "is Palindrome");
-    //     } else {
-    //         console.log("Task 8:", original, "is NOT Palindrome");
-    //     }
-    // }
+        if (original == reverse) {
+            console.log("Task 8:", original, "is Palindrome");
+        } else {
+            console.log("Task 8:", original, "is NOT Palindrome");
+        }
+    }
 
 </script>-
 </body>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function toggleFavorite(button) {
+    if (button.textContent === "🤍") {
+      button.textContent = "❤️";
+      button.style.color = "red";
+      button.style.filter = "none"; // show color when favorited
+    } else {
+      button.textContent = "🤍";
+      button.style.color = "black";
+      button.style.filter = "grayscale(100%)"; // back to black & white
+    }
+  }
+    </script>
+</body>
+</html>
